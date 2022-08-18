@@ -1,28 +1,25 @@
 <template>
   <div id="home">
     <navi-bar class="home-navi"><div slot="center">购物街</div></navi-bar>
-    <swiper-main>
-      <swiper-item v-for="item in banners" :key="item">
-        <a :href="item.link">
-          <img :src="item.image" alt="">
-        </a>
-      </swiper-item>
-    </swiper-main>
+    <home-swiper :banners="banners"/>
+    <Home-Recommend :recommends="recommends"/>
   </div>
 </template>
 
 <script>
   import NaviBar from 'components/common/navibar/NaviBar'
+  import HomeSwiper from './childComps/HomeSwiper'
+  import HomeRecommend from "./childComps/HomeRecommend"
+
   import {getHomeMultidata} from "network/home"
-  import { SwiperMain, SwiperItem } from 'components/common/swiper'
-  
+
   export default {
     name: 'HomeCom',
     components: {
-      NaviBar,
-      SwiperMain,
-      SwiperItem
-    },
+    NaviBar,
+    HomeSwiper,
+    HomeRecommend
+},
     data() {
       return {
         banners: [],

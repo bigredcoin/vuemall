@@ -147,7 +147,7 @@
        display: flex; 
     }
 
-    .indecator {
+    .indicator {
         display: flex;
         justify-content: center;
         position: absolute;
@@ -168,6 +168,6 @@
     }
 
     .indi-item.active {
-        background-color: rgba(212, 62, blue46, 1.0);
+        background-color: rgba(212, 62, 46, 1.0);
     }
 </style>
