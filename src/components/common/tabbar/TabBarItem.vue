@@ -4,7 +4,7 @@
         <slot name="item-icon"></slot>
       </div>
       <div v-else>
-        <slot name="item-icon-activated"></slot>
+        <slot name="item-icon-active"></slot>
       </div>
       <div :style="activeStyle">
         <slot name="item-text"></slot>

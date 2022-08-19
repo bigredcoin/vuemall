@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const HomeCom = () => import('views/home/Home')
+const CategoryCom = () => import('views/category/Category')
 const CartCom = () => import('views/cart/Cart')
 const ProfileCom = () => import('views/profile/Profile')
 
@@ -16,6 +17,11 @@ const routes = [
         path: '/home',
         name: 'Home',
         component: HomeCom
+      },
+      {
+        path: '/category',
+        name: 'Category',
+        component: CategoryCom
       },
       {
         path: '/cart',
